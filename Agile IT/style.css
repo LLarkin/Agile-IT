@@ -1,0 +1,306 @@
+*{
+	box-sizing: border-box;
+	margin: 0px;
+	padding: 0px;
+	
+	transition: 1s;
+}
+.sectionOne{
+
+	height: 100vh;
+	width: 100vw;
+
+}
+
+.TopHeader{
+	width: 100%;
+	height: 20vh;/*
+background: rgb(93,143,80);
+background: linear-gradient(0deg, rgba(93,143,80,0.6674019949776786) 46%, rgba(237,147,173,1) 100%);	position: absolute;
+*/
+position: absolute;
+background: transparent;
+display: flex;
+align-items: center;
+justify-content: space-around;
+z-index: 10;
+top: 0px;
+}
+.LogoContainer{
+	width: 200px;
+	height: 150px;
+	background-color: transparent;
+	color: white;
+	display: flex;
+	align-items: center;
+	flex: 1;
+	margin-left: 5vw;
+}
+.LogoContainer h3, .LogoContainer i{
+	font-size: 50px;
+	background-color: transparent;
+
+}
+
+.LogoContainer h3{
+	font-family: 'Bakbak One', cursive;
+}
+
+.contactContainer{
+	width: 350px;
+	height: 150px;
+
+	display: flex;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: space-around;
+	text-align: center;
+
+}
+
+
+.contactContainer p{
+	background: transparent;
+	color: white;
+	font-size: 25px;
+	border: 2px solid white;
+	padding: 4px;
+	border-radius: 5px;
+	min-width: 150px;
+	height: 70px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	font-family: 'Mukta', sans-serif;
+}
+.contactContainer p:hover {
+	background-color: white;
+	color: black;
+}
+
+#Backvideo{
+	min-height: 100vh;
+	height: 100vh;
+	min-width: 100%;
+	width: 100%;
+	background-color: black;
+	z-index: -1;
+}
+
+#hamburger{
+	font-size: 60px;
+	color: white;
+	cursor: pointer;
+	transform: translateX(-250vw);
+	margin-right: 5vw;
+}
+
+#hamburger:hover{
+	transform: rotate(90deg);
+}
+#times{
+	display: none;
+}
+
+
+#check:checked ~ section label #bars{
+	display: none;
+}
+
+#check:checked ~ section label #times{
+	display: unset;
+}
+#check{
+	display: none;
+}
+
+.navbar{
+	height: 30vh;
+	width: 100%;
+	
+	position: absolute;
+	top: 25vh;
+
+	z-index: 10;
+}
+
+.navul{
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	
+}
+
+.navuli{
+	list-style: none;
+	cursor: pointer;
+	position: relative;
+}
+
+.navulia{
+	text-decoration: none;
+	color: white;
+	font-size: 25px;
+	font-family: 'Mukta', sans-serif;
+}
+
+.underline{
+	width: 0%;
+	height: 5px;
+	background-color: white;
+}
+
+.navuli:hover .underline{
+	width: 100%;
+}
+
+.navuli:hover .subcategories{
+	position: absolute;
+	height: 50vh;
+	width: 70vw;
+
+	display: unset;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.navuli:hover #onelineList{
+	position: absolute;
+	height: 50vh;
+	width: 30vw;
+
+	display: unset;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+
+}
+
+.subcategories{
+	overflow: hidden;
+	display: flex;
+	align-items: center;
+	justify-content: space-around;
+	width: 0px;
+	height: 0px;
+	left:  0vw;
+		background: rgb(93,143,80);
+	background: linear-gradient(0deg, rgba(93,143,80,0.6674019949776786) 46%, rgba(237,147,173,1) 100%);	position: absolute;
+
+}
+
+.SubCategory{
+	height: 100%;
+	width: 30%;
+
+	display: flex;
+	flex-direction: column;
+	justify-content: space-around;
+	align-items: center;
+}
+
+#oneline{
+	width: 100%;
+
+}
+
+.SubCategory a , .SubCategory span{
+	text-decoration: none;
+	color: white;
+	text-align: center;
+	font-size: 25px;
+		font-family: 'Mukta', sans-serif;
+	font-weight: 500;
+	padding-right: 5px;
+	padding-left: 5px;
+}
+
+.SubCategory span{
+	font-size: 25px;
+	background-color: white;
+	color: black;
+	font-weight: 1000;
+	width: 100%;
+}
+
+.SubCategory a:hover{
+	text-decoration: underline;
+}
+.SubCategory a{
+	width: 100%;
+	background-color: black;
+}
+
+
+#check:checked ~ section .navbar{
+	height: 75vh;
+		background: rgb(93,143,80);
+	background: linear-gradient(0deg, rgba(93,143,80,0.6674019949776786) 46%, rgba(237,147,173,1) 100%);	position: absolute;
+	transform: translateX(0);
+}
+#check:checked ~ section nav .navul {
+	flex-direction: column;
+	align-items: flex-start;
+}  
+
+#check:checked ~ nav ul {
+	margin-left: 5vw;
+}
+
+
+
+@media only screen and (max-width:1000px){
+	.contactContainer{
+		width: 150px;
+		transform: translateX(-250vw);
+	}
+	#hamburger{
+		transform: translateX(0vw);
+	}
+	.LogoContainer h3, .LogoContainer i{
+	font-size: 40px;
+	background-color: transparent;
+	}
+	.navuli{
+		margin-left: 5vw;
+
+	}
+	.subcategories{
+		z-index: 15;
+	}
+
+	.navbar{
+		transform: translateX(-250vw); 
+		overflow: hidden;
+	}
+	#onelineList{
+		top: -15vh;
+		left: 30vw;
+	}
+	.navulia{
+			font-size: 35px;
+	}
+}
+@media only screen and (max-width:400px){
+	
+	.LogoContainer h3, .LogoContainer i{
+	font-size: 30px;
+	}
+}
+@media only screen and (max-width:500px){
+	
+	.navulia{
+			font-size: 25px;
+	}
+	.subcategories{
+		transform: translateX(-250vw);
+
+	}
+}
